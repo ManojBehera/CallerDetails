@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="General Settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="prefEnabled"
+            android:summary="Enable CallerDetails"
+            android:title="Enable" >
+        </CheckBoxPreference>
+
+        <ListPreference
+            android:defaultValue="Center"
+            android:dependency="prefEnabled"
+            android:entries="@array/pref_position_entries"
+            android:entryValues="@array/pref_position_entries"
+            android:key="prefposition"
+            android:summary="Select toast position"
+            android:title="Toast Position" />
+        <ListPreference
+            android:defaultValue="10"
+            android:dependency="prefEnabled"
+            android:entries="@array/pref_duration_entries"
+            android:entryValues="@array/pref_duration_values"
+            android:key="prefduration"
+            android:summary="Select toast duration"
+            android:title="Toast Duration" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
